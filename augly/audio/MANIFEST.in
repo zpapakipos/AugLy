@@ -1,0 +1,2 @@
+include augly/assets/audio/*
+include augly/assets/tests/audio_tests/inputs/*

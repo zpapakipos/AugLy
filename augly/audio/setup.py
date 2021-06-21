@@ -2,22 +2,27 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 
 import setuptools
+from pathlib import Path
+from ..setup import VERSION
 
 
-VERSION = "0.1.2"
-
-
-requirements = ["augly_audio", "augly_image", "augly_text", "augly_video"]
+requirements = [
+    r
+    for r in Path("requirements.txt").read_text().splitlines()
+    if '@' not in r
+]
 
 
 setuptools.setup(
-    name="augly",
+    name="augly_audio",
     version=VERSION,
-    description="A data augmentations library for audio, image, text, & video.",
+    description="A data augmentations library for audio. Submodule of augly.",
     url="https://github.com/facebookresearch/AugLy",
     author="Zoe Papakipos and Joanna Bitton",
     author_email="zoep@fb.com",
-    packages=setuptools.find_packages(exclude=["augly.tests"]),
+    packages=setuptools.find_packages(
+        exclude=["augly.image", "augly.tests", "augly.text", "augly.video"],
+    ),
     include_package_data=True,
     install_requires=requirements,
     classifiers=[

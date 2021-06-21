@@ -1,0 +1,2 @@
+include augly/assets/text/*
+include augly/assets/tests/text_tests/inputs/*

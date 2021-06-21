@@ -1,0 +1,5 @@
+include augly/assets/fonts/*
+include augly/assets/masks/*
+include augly/assets/screenshot_templates/*
+include augly/assets/tests/image_tests/inputs/*
+include augly/assets/twemojis/*/*
