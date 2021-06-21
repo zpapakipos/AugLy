@@ -3,9 +3,9 @@
 
 import setuptools
 from pathlib import Path
-from ..setup import VERSION
 
 
+VERSION = "0.1.2"
 requirements = [
     r
     for r in Path("requirements.txt").read_text().splitlines()

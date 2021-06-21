@@ -5,8 +5,6 @@ import setuptools
 
 
 VERSION = "0.1.2"
-
-
 requirements = ["augly_audio", "augly_image", "augly_text", "augly_video"]
 
 
