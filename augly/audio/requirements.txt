@@ -1,0 +1,8 @@
+audioread==2.1.9
+iopath==0.1.8
+librosa==0.8.1
+numpy==1.20.2
+python-magic==0.4.22
+SoundFile==0.10.3.post1
+torch==1.8.1
+torchaudio==0.8.1

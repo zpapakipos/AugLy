@@ -14,15 +14,13 @@ requirements = [
 
 
 setuptools.setup(
-    name="augly_audio",
+    name="augly-audio",
     version=VERSION,
     description="A data augmentations library for audio. Submodule of augly.",
     url="https://github.com/facebookresearch/AugLy",
     author="Zoe Papakipos and Joanna Bitton",
     author_email="zoep@fb.com",
-    packages=setuptools.find_packages(
-        exclude=["augly.image", "augly.tests", "augly.text", "augly.video"],
-    ),
+    packages=["."],
     include_package_data=True,
     install_requires=requirements,
     classifiers=[
