@@ -1,0 +1,37 @@
+# @autodeps
+load("@fbcode_macros//build_defs:sphinx_wiki.bzl", "sphinx_wiki")
+
+sphinx_wiki(
+    name = "docs",
+    srcs = [
+        "audio.rst",
+        "image.rst",
+        "index.rst",
+        "text.rst",
+        "video.rst",
+    ],
+    apidoc_modules = {
+        "augly.audio.composition": "audio_aug_composition",
+        "augly.audio.functional": "audio_aug_functional",
+        "augly.audio.intensity": "audio_aug_intensity",
+        "augly.audio.transforms": "audio_aug_transforms",
+        "augly.image.composition": "image_aug_composition",
+        "augly.image.functional": "image_aug_functional",
+        "augly.image.helpers": "image_aug_helpers",
+        "augly.image.transforms": "image_aug_transforms",
+        "augly.text.functional": "text_aug_functional",
+        "augly.text.transforms": "text_aug_transforms",
+        "augly.video.composition": "video_aug_composition",
+        "augly.video.fb.torchaugs": "video_aug_torchaugs",
+        "augly.video.functional": "video_aug_functional",
+        "augly.video.transforms": "video_aug_transforms",
+    },
+    python_library_deps = [
+        "//aml/augly/audio:lib",
+        "//aml/augly/image:lib",
+        "//aml/augly/text:lib",
+        "//aml/augly/video:lib",
+        "//aml/augly/video:pytorch_lib",
+    ],
+    wiki_root_path = "AI_Red_Team/Augmentations_Library/API_Reference_Guide",
+)
